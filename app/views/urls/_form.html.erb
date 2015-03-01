@@ -1,0 +1,14 @@
+<% if flash[:notice] %>
+    <div id="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<br><br>
+<center><h1>Welcome to Awesome URL Generator</h1>
+<br><br>
+
+<%= form_tag(controller: "urls", action: "create", method: "post") do %>
+  <%= label_tag(:input, "Enter the longer URL:") %>
+  <%= text_field_tag(:input) %>
+  <%= submit_tag("Submit") %>
+<% end %>
+<br>
